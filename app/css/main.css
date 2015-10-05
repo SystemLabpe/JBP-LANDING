@@ -91,3 +91,179 @@ h2 {
 #academic-levels img {
   margin: 0 auto;
 }
+
+/* ==================================================
+   Projects
+================================================== */
+#gallery h2 {
+  color: #4C4C4C;
+}
+
+#gallery ul.filterOptions {
+  text-align: center;
+}
+
+#gallery ul.filterOptions li {
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+#gallery ul.filterOptions li a{
+  text-decoration: none;
+}
+
+#gallery ul.filterOptions li:hover {
+  border: 1px solid #0196AF;
+}
+
+#gallery ul.filterOptions li.active {
+  border: 1px solid #0196AF;
+  background-color: #0196AF;
+}
+
+#gallery ul.filterOptions li.active a{
+  color: #FFFFFF;
+}
+
+#gallery .item {
+  display: inline-block;
+  float: none !important;
+  padding: 0 3px 3px 0;
+  width: 230px
+}
+
+#gallery .item-content {
+  margin: 3px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+  -moz-box-shadow: 1px 1px 2px #e6e6e6;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+}
+
+#gallery .item-content img {
+   display: block;
+   position: relative;
+}
+
+#gallery .item-content h3 {
+   text-align: center;
+   position: relative;
+   font-size: 16px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.4);
+}
+
+#gallery .item-content .item-mask {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+
+#gallery .item-content .item-mask ul {
+  height:  118px;
+  margin: 5px 0 5px 0;
+}
+
+#gallery .item-content .item-mask li {
+   font-size: 12px;
+   position: relative;
+   text-align: left;
+   padding-left: 10px;
+
+}
+
+#gallery .item-content .item-mask {
+  text-align: right;
+  padding-right: 15px;
+}
+
+
+/*------Transition-------*/
+
+#gallery .item-content .item-mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   background-color: rgba(77,77,77, 0.9);
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+}
+
+#gallery .item-content:hover .item-mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+
+#gallery .item-content img {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#gallery .item-content:hover img {
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);
+  -o-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
+}
+
+#gallery .item-content h3 {
+   -webkit-transform: translateY(-100px);
+   -moz-transform: translateY(-100px);
+   -o-transform: translateY(-100px);
+   -ms-transform: translateY(-100px);
+   transform: translateY(-100px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+
+#gallery .item-content a.item-mask-info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+
+#gallery .item-content:hover a.item-mask-info {
+   -webkit-transition-delay: 0.2s;
+   -moz-transition-delay: 0.2s;
+   -o-transition-delay: 0.2s;
+   -ms-transition-delay: 0.2s;
+   transition-delay: 0.2s;
+}
+
+#gallery .item-content:hover h3,
+#gallery .item-content:hover a.project-mask-info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transform: translateY(0px);
+   -moz-transform: translateY(0px);
+   -o-transform: translateY(0px);
+   -ms-transform: translateY(0px);
+   transform: translateY(0px);
+}
+
