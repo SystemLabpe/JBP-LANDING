@@ -148,12 +148,17 @@ p {
 /* ==================================================
    Gallery
 ================================================== */
+#gallery {
+  color: #FFFFFF;
+}
+
 #gallery h2 {
   color: #2196F3;
 }
 
 #gallery ul.filterOptions {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 #gallery ul.filterOptions li {
@@ -233,7 +238,6 @@ p {
 
 #gallery .item-content .item-mask {
   text-align: right;
-  padding-right: 15px;
 }
 
 
