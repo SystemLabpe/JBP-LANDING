@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "Open Sans",Arial,Helvetica Neue,sans-serif;
+  font-family: "Montserrat",sans-serif;
   color: #706F6F;
 }
 
@@ -29,11 +29,20 @@ a, a:hover, a:focus {
 }
 
 h1 {
+  font-size: 40px;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 h2 {
   text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
 }
 
 /* ==================================================
@@ -65,7 +74,14 @@ h2 {
     Home
 ================================================== */
 #home {
-
+  color: #FFFFFF;
+  background-image: url('../img/home-bg-4.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #home .logo {
@@ -74,29 +90,66 @@ h2 {
 
 #home .slogan {
   margin-top: 0;
+  font-size: 20px;
   text-align: center;
+  margin-bottom: 80px;
+}
+
+#home .slogan strong {
+  font-size: 28px;
 }
 
 /* ==================================================
     Academic Levels
 ================================================== */
 #academic-levels {
+  background: url('../img/grid_bg.png') repeat top left #fff;
+}
 
+#academic-levels h2 {
+  color: #4CAF50;
 }
 
 #academic-levels h3 {
+  color: #00C853;
   text-align: center;
 }
 
 #academic-levels img {
-  margin: 0 auto;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+}
+
+#academic-levels p {
+  text-align: justify;
 }
 
 /* ==================================================
-   Projects
+   School of Tomorrow
+================================================== */
+#school-of-tomorrow {
+  color: #3F51B5
+}
+
+#school-of-tomorrow h2 {
+  color: #3F51B5;
+}
+/* ==================================================
+   SCA
+================================================== */
+#sca {
+
+}
+
+#sca h2 {
+  color: #F44336;
+}
+
+/* ==================================================
+   Gallery
 ================================================== */
 #gallery h2 {
-  color: #4C4C4C;
+  color: #2196F3;
 }
 
 #gallery ul.filterOptions {
@@ -267,3 +320,28 @@ h2 {
    transform: translateY(0px);
 }
 
+/* ==================================================
+   About us
+================================================== */
+#about-us {
+
+}
+
+#about-us h2{
+  color: #FF9800;
+}
+
+#about-us h3 {
+  color: #FFC107
+}
+
+/* ==================================================
+   Contacts
+================================================== */
+#contact {
+
+}
+
+#contact h2 {
+
+}
