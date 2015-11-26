@@ -4,6 +4,10 @@
   "dependencies": {
     "jquery-ui": "~1.11.4",
     "bootstrap": "~3.3.5",
-    "font-awesome": "4.3.0"
+    "font-awesome": "4.3.0",
+    "video.js": "~5.2.2",
+    "animate.css": "~3.4.0",
+    "wow": "wow.js#~1.1.2",
+    "typed.js": "~1.1.1"
   }
 }

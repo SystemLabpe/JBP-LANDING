@@ -9,49 +9,74 @@
   <title>Jesus el Buen Pastor</title>
   <!-- build:css css/style.min.css -->
   <!-- bower:css -->
-<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+  <link rel='stylesheet' href='lib/font-awesome/css/font-awesome.css' />
+  <link rel='stylesheet' href='lib/video.js/dist/video-js.css' />
+  <link rel='stylesheet' href='lib/animate.css/animate.css' />
   <!-- endbower -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/css/elastic_grid.css">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/nerveSlider.css">
+  <link rel="stylesheet" href="/css/responsive.css">
   <!-- endinject -->
   <!-- endbuild -->
 </head>
 <body>
   <section id="home" class="jbp-section">
+    <img src="img/home-bg-2.jpg" class="background">
     <div class="container">
-      <img src="img/logo.png" class="logo img-responsive">
-      <h1>Jesús  el  Buen  Pastor</h1>
-      <p class="slogan">Más que un método, un <strong>sistema integral éxitoso</strong></p>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="img/logo.png" class="logo img-responsive fadeInDownBig animated">
+        </div>
+        <div class="col-md-6">
+          <div class="typed-jbp">
+            <!-- <h1 class="jbp">Jesús  el  Buen  Pastor</h1> -->
+            <!-- <p class="slogan">Más que un método, un <strong>sistema integral éxitoso</strong></p> -->
+          </div>
+          <div class="element"></div>
+        </div>
+      </div>
     </div>
   </section>
   <section id="academic-levels" class="jbp-section">
-    <div class="container">
-      <h2>Niveles Académicos</h2>
+    <div class="container-fluid">
+        <article class="row academic-level initial">
+          <div class="col-md-4">
+            <img src="img/academic-levels/inicial.jpg" class="img-responsive">
+          </div>
+          <div class="col-md-4">
+            <h3>Inicial</h3>
+            <p>Una educación integral que desarrolla la inteligencia y creatividad de su menor hijo, en un ambiente seguro y recreativo.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="img/academic-levels/inicial_2.jpg" class="img-responsive">
+          </div>
+        </article>
+      <!-- </div> -->
       <div class="row">
-        <div class="col-md-12">
-          <h3>Inicial</h3>
+        <article class="col-md-6 academic-level primary">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
-              <img src="img/academic-levels/inicial_2.jpg" class="img-responsive">
-              <p>Una educación integral que desarrolla la inteligencia y creatividad de su menor hijo, en un ambiente seguro y recreativo.</p>
+              <img src="img/academic-levels/primaria.jpg" class="img-responsive">
+              <h3>Primaria</h3>
+              <p>Una educación que promueve el logro de metas personales en los educandos a través de capacidades y valores.</p>
+              <img src="img/academic-levels/primaria_2.jpg" class="img-responsive">
             </div>
           </div>
-        </div>
+        </article>
+        <article class="col-md-6 academic-level secundary">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <img src="img/academic-levels/secundaria.jpg" class="img-responsive">
+              <h3>Secundaria</h3>
+              <p>Desarrollamos una educación que promueva al estudiante la capacidad de ingresar a la universidad y pueda desenvolverse con éxito en la sociedad al terminar su etapa escolar.</p>
+              <img src="img/academic-levels/secundaria_2.jpg" class="img-responsive">
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h3>Primaria</h3>
-          <img src="img/academic-levels/primaria.jpg" class="img-responsive">
-          <p>Una educación que promueve el logro de metas personales en los educandos a través de capacidades y valores.</p>
-        </div>
-        <div class="col-md-6">
-          <h3>Secundaria</h3>
-          <img src="img/academic-levels/secundaria.jpg" class="img-responsive">
-          <p>Desarrollamos una educación que promueva al estudiante la capacidad de ingresar a la universidad y pueda desenvolverse con éxito en la sociedad al terminar su etapa escolar.</p>
-        </div>
-      </div>
-
     </div>
   </section>
   <section id="school-of-tomorrow"class="jbp-section">
@@ -72,8 +97,107 @@
   <section id="sca" class="jbp-section">
     <div class="container">
       <h2>Sistema de Comunicación Académica</h2>
-      <!-- <iframe src="http://www.sca.edu.pe/#sca-demo" style="
-    width: 100%;"></iframe> -->
+      <div class="sca-slider">
+        <div>
+          <div class="ns_slideContent bg-1">
+            <article id="attendance" class="module attendance">
+            <h3>ASISTENCIA</h3>
+            <div class="row">
+              <div class="col-md-7">
+                <p class="text-center">Ahorra tiempo registrando las asistencias de tus alumnos.</p>
+                <div id="video1">
+                  <video id="v_prueba_1" class="video-js">
+                   <source src="video/attendance/attendance-web.mp4" type='video/mp4' />
+                   <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                  </video>
+                  <img src="img/monitor.png">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <p class="text-center">Ahora podrás saber el estado de las asistencias en tiempo real.</p>
+                    <div id="video2">
+                      <video id="v_prueba_2" class="video-js">
+                       <source src="video/attendance/attendance-movil.mp4" type='video/mp4' />
+                       <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                      </video>
+                      <img src="img/mobile.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+        <div>
+          <div class="ns_slideContent bg-2">
+            <article id="evaluation" class="module evaluation">
+              <h3>EVALUACIONES</h3>
+              <div class="row">
+                <div class="col-md-7">
+                  <p class="text-center">Registra las notas de tus alumnos de una manera rápida y sencilla.</p>
+                  <div id="video3">
+                    <video id="v_prueba_3" class="video-js">
+                     <source src="video/evaluations/evaluation-web.mp4" type='video/mp4' />
+                     <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                    </video>
+                    <img src="img/monitor-small.png">
+                  </div>
+                </div>
+                <div class="col-md-5 wow bounceInUp">
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <p class="text-center">Monitorea su desempeño en cada una de las asignaturas.</p>
+                      <div id="video4">
+                        <video id="v_prueba_4" class="video-js">
+                         <source src="video/evaluations/evaluation-movil.mp4" type='video/mp4' />
+                         <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                        </video>
+                        <img src="img/mobile.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div>
+        <div class="ns_slideContent bg-3">
+          <article id="task" class="module task">
+            <h3>TAREAS</h3>
+            <div class="row">
+              <div class="col-md-7">
+                <p class="text-center">Planifica las tareas y matenlas organizadas para su posterior calificación.</p>
+                <div id="video5">
+                  <video id="v_prueba_5" class="video-js">
+                   <source src="video/tasks/task-web.mp4" type='video/mp4' />
+                   <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                  </video>
+                  <img src="img/monitor-small.png">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <p class="text-center">Enterate de las tareas y ayudalo a planificar el desarrollo de las mismas.</p>
+                    <div id="video6">
+                      <video id="v_prueba_6" class="video-js">
+                       <source src="video/tasks/task-movil.mp4" type='video/mp4' />
+                       <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                      </video>
+                      <img src="img/mobile.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      </div>
     </div>
   </section>
   <section id="gallery" class="jbp-section">
@@ -138,11 +262,11 @@
       <div class="row">
         <div class="col-md-6">
           <h3>Misión</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum est sit amet erat vehicula, ac cursus tellus facilisis. Maecenas congue libero non bibendum auctor. Praesent suscipit imperdiet ligula ut.</p>
+          <p>La Institución Educativa Privada “Jesús, el Buen Pastor” Brinda un servicio educativo de calidad cimentados en principios cristianos, formando alumnos con un alto conocimiento de la doctrina bíblica, alto nivel académico, con capacidad creativa y critica y con un liderazgo responsable estando a la vanguardia de las exigencias de la sociedad.</p>
         </div>
         <div class="col-md-6">
           <h3>Visión</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum est sit amet erat vehicula, ac cursus tellus facilisis. Maecenas congue libero non bibendum auctor. Praesent suscipit imperdiet ligula ut.</p>
+          <p>La Institución Educativa Privada Jesús El Buen Pastor anhela tener una Educación Integral basada en Principios Bíblicos como también en la Preparación Académica y en El Dominio del Ingles para asuma un liderazgo responsable estando a la vanguardia de las exigencias de la sociedad.</p>
         </div>
       </div>
       <div class="col-md-8 col-md-offset-2">
@@ -167,18 +291,33 @@
   <section id="contact" class="jbp-section">
     <div class="container">
       <h2>Contacto</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="location" style="width:100%; height:350px;"></div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+      </div>
     </div>
   </section>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
   <!-- build:js js/vendor.min.js -->
   <!-- bower:js -->
   <script src="lib/jquery/dist/jquery.js"></script>
   <script src="lib/jquery-ui/jquery-ui.js"></script>
   <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="lib/video.js/dist/video.js"></script>
+  <script src="lib/wow/dist/wow.js"></script>
+  <script src="lib/typed.js/dist/typed.min.js"></script>
   <!-- endbower -->
   <!-- inject:js -->
+  <script src="/js/jquery.nerveSlider.js"></script>
   <script src="/js/main.js"></script>
   <!-- endinject -->
   <!-- endbuild -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDemrVi5dO3z-QRfTmR1FswJxSeZu3i7I&callback=initMap">
+  </script>
 </body>
 </html>
