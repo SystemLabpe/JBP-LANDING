@@ -111,9 +111,9 @@ jQuery(document).ready(function($){
 
   video4 = videojs('v_prueba_4', defaultVideoOptions, function() {});
 
-  video5 = videojs('v_prueba_5',defaultVideoOptions, function() {});
+  video5 = videojs(document.getElementsByClassName('bx-video-5')[1],defaultVideoOptions, function() {});
 
-  video6 = videojs('v_prueba_6', defaultVideoOptions, function() {});
+  video6 = videojs(document.getElementsByClassName('bx-video-6')[1], defaultVideoOptions, function() {});
 
   video1.on('ended', function() {
     setAnimation($('#video2'),'animated shake');
@@ -131,7 +131,6 @@ jQuery(document).ready(function($){
   });
 
   video4.on('ended', function() {
-    // scaSlider.goToNextSlide();
     scaSlider.goToSlide(2);
     video5.play();
   });
