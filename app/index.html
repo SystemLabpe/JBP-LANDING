@@ -13,6 +13,7 @@
   <link rel='stylesheet' href='lib/font-awesome/css/font-awesome.css' />
   <link rel='stylesheet' href='lib/video.js/dist/video-js.css' />
   <link rel='stylesheet' href='lib/animate.css/animate.css' />
+  <link rel='stylesheet' href='lib/bxslider-4/dist/jquery.bxslider.css' />
   <!-- endbower -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/css/elastic_grid.css">
@@ -98,9 +99,39 @@
     <div class="container">
       <h2>Sistema de Comunicación Académica</h2>
       <div class="sca-slider">
-        <div>
-          <div class="ns_slideContent bg-1">
-            <article id="attendance" class="module attendance">
+<!--         <div class="slide bg-3">
+          <article id="task" class="module task">
+            <h3>TAREAS</h3>
+            <div class="row">
+              <div class="col-md-7">
+                <p class="text-center">Planifica las tareas y matenlas organizadas para su posterior calificación.</p>
+                <div id="video5" >
+                  <video id="v_prueba_5" class="video-js">
+                   <source src="video/tasks/task-web.mp4" type='video/mp4' />
+                   <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                  </video>
+                  <img src="img/monitor-small.png">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <p class="text-center">Enterate de las tareas y ayudalo a planificar el desarrollo de las mismas.</p>
+                    <div id="video6">
+                      <video id="v_prueba_6" class="video-js">
+                       <source src="video/tasks/task-movil.mp4" type='video/mp4' />
+                       <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                      </video>
+                      <img src="img/mobile.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div> -->
+        <div class="slide bg-1">
+          <article id="attendance" class="module attendance">
             <h3>ASISTENCIA</h3>
             <div class="row">
               <div class="col-md-7">
@@ -129,49 +160,45 @@
               </div>
             </div>
           </article>
-          </div>
         </div>
-        <div>
-          <div class="ns_slideContent bg-2">
-            <article id="evaluation" class="module evaluation">
-              <h3>EVALUACIONES</h3>
-              <div class="row">
-                <div class="col-md-7">
-                  <p class="text-center">Registra las notas de tus alumnos de una manera rápida y sencilla.</p>
-                  <div id="video3">
-                    <video id="v_prueba_3" class="video-js">
-                     <source src="video/evaluations/evaluation-web.mp4" type='video/mp4' />
-                     <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
-                    </video>
-                    <img src="img/monitor-small.png">
-                  </div>
+        <div class="slide bg-2">
+          <article id="evaluation" class="module evaluation">
+            <h3>EVALUACIONES</h3>
+            <div class="row">
+              <div class="col-md-7">
+                <p class="text-center">Registra las notas de tus alumnos de una manera rápida y sencilla.</p>
+                <div id="video3">
+                  <video id="v_prueba_3" class="video-js">
+                   <source src="video/evaluations/evaluation-web.mp4" type='video/mp4' />
+                   <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                  </video>
+                  <img src="img/monitor-small.png">
                 </div>
-                <div class="col-md-5 wow bounceInUp">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <p class="text-center">Monitorea su desempeño en cada una de las asignaturas.</p>
-                      <div id="video4">
-                        <video id="v_prueba_4" class="video-js">
-                         <source src="video/evaluations/evaluation-movil.mp4" type='video/mp4' />
-                         <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
-                        </video>
-                        <img src="img/mobile.png">
-                      </div>
+              </div>
+              <div class="col-md-5">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <p class="text-center">Monitorea su desempeño en cada una de las asignaturas.</p>
+                    <div id="video4">
+                      <video id="v_prueba_4" class="video-js">
+                       <source src="video/evaluations/evaluation-movil.mp4" type='video/mp4' />
+                       <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                      </video>
+                      <img src="img/mobile.png">
                     </div>
                   </div>
                 </div>
               </div>
-            </article>
-          </div>
+            </div>
+          </article>
         </div>
-        <div>
-        <div class="ns_slideContent bg-3">
+        <div class="slide bg-3">
           <article id="task" class="module task">
             <h3>TAREAS</h3>
             <div class="row">
               <div class="col-md-7">
                 <p class="text-center">Planifica las tareas y matenlas organizadas para su posterior calificación.</p>
-                <div id="video5">
+                <div id="video5" >
                   <video id="v_prueba_5" class="video-js">
                    <source src="video/tasks/task-web.mp4" type='video/mp4' />
                    <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
@@ -196,7 +223,37 @@
             </div>
           </article>
         </div>
-      </div>
+        <div class="slide bg-3">
+          <article id="task" class="module task">
+            <h3>TAREAS</h3>
+            <div class="row">
+              <div class="col-md-7">
+                <p class="text-center">Planifica las tareas y matenlas organizadas para su posterior calificación.</p>
+                <div id="video5" >
+                  <video id="v_prueba_5" class="video-js">
+                   <source src="video/tasks/task-web.mp4" type='video/mp4' />
+                   <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                  </video>
+                  <img src="img/monitor-small.png">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <p class="text-center">Enterate de las tareas y ayudalo a planificar el desarrollo de las mismas.</p>
+                    <div id="video6">
+                      <video id="v_prueba_6" class="video-js">
+                       <source src="video/tasks/task-movil.mp4" type='video/mp4' />
+                       <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
+                      </video>
+                      <img src="img/mobile.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -311,6 +368,8 @@
   <script src="lib/video.js/dist/video.js"></script>
   <script src="lib/wow/dist/wow.js"></script>
   <script src="lib/typed.js/dist/typed.min.js"></script>
+  <script src="lib/bxslider-4/dist/jquery.bxslider.js"></script>
+  <script src="lib/jquery.fitvids/jquery.fitvids.js"></script>
   <!-- endbower -->
   <!-- inject:js -->
   <script src="/js/jquery.nerveSlider.js"></script>

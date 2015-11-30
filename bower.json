@@ -8,6 +8,8 @@
     "video.js": "~5.2.2",
     "animate.css": "~3.4.0",
     "wow": "wow.js#~1.1.2",
-    "typed.js": "~1.1.1"
+    "typed.js": "~1.1.1",
+    "bxslider-4": "~4.2.5",
+    "jquery.fitvids": "fitvids#~1.1.0"
   }
 }

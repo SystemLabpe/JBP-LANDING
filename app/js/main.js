@@ -1,96 +1,19 @@
 "use strict";
 
+var video1 = null, video2 = null, video3 = null,
+    video4 = null, video5 = null, video6 = null;
+
+      function v1(){
+    setAnimation($('#video2'),'animated shake');
+    video2.play();
+  }
+
 var defaultVideoOptions = {
   controls:false,
   autoplay:false,
   preload:'auto',
-  width:'auto',
-  height:'auto',
   muted:true
 };
-
-var videosArray = [];
-var video1 = null, video2 = null, video3 = null,
-    video4 = null, video5 = null, video6 = null;
-
-function setAnimation(element,animation) {
-  element.removeClass().addClass(animation + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
-    element.removeClass();
-    element.removeAttr('style');
-  });
-}
-
-video1 = videojs('v_prueba_1',defaultVideoOptions, function() {
-  this.on('ended', function() {
-    setAnimation($('#video2'),'animated shake');
-    video2.play();
-  });
-  videosArray.push({element:this,ratio:68/86});
-});
-
-video2 = videojs('v_prueba_2', defaultVideoOptions, function() {
-  this.on('ended', function() {
-    video1.play();
-  });
-  videosArray.push({element:this,ratio:44/25});
-});
-
-video3 = videojs('v_prueba_3',defaultVideoOptions, function() {
-  this.on('ended', function() {
-    setAnimation($('#video4'),'animated shake');
-    video4.play();
-  });
-  videosArray.push({element:this,ratio:562/860});
-});
-
-video4 = videojs('v_prueba_4', defaultVideoOptions, function() {
-  this.on('ended', function() {
-    video3.play();
-  });
-  videosArray.push({element:this,ratio:44/25});
-});
-
-video5 = videojs('v_prueba_5',defaultVideoOptions, function() {
-  this.on('ended', function() {
-    setAnimation($('#video6'),'animated shake');
-    video6.play();
-  });
-  videosArray.push({element:this,ratio:562/860});
-});
-
-video6 = videojs('v_prueba_6', defaultVideoOptions, function() {
-  this.on('ended', function() {
-    video5.play();
-  });
-  videosArray.push({element:this,ratio:44/25});
-});
-
-// var wow = new WOW(
-//   {
-//     boxClass:     'wow',
-//     animateClass: 'animated', // animation css class (default is animated)
-//     offset:       150,          // distance to the element when triggering the animation (default is 0)
-//     mobile:       false,       // trigger animations on mobile devices (default is true)
-//     live:         true,       // act on asynchronously loaded content (default is true)
-//     callback:     function(box) {
-//       switch(box.id){
-//         case 'video1':
-//           video1.play();
-//           break;
-//         case 'video3':
-//           video3.play();
-//           break;
-//         case 'video5':
-//           video5.play();
-//           break;
-//         default:
-//           break;
-//       }
-//       video1.play();
-//     }
-//   }
-// );
-// wow.init();
 
 function initMap() {
   var location_1 = new google.maps.LatLng(-12.078021, -76.996479);
@@ -120,6 +43,13 @@ function initMap() {
   });
 }
 
+function setAnimation(element,animation) {
+  element.removeClass().addClass(animation + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+    element.removeClass();
+    element.removeAttr('style');
+  });
+}
+
 jQuery(document).ready(function($){
 
  $(".element").typed({
@@ -129,12 +59,6 @@ jQuery(document).ready(function($){
     startDelay: 1000,
     showCursor: false
   });
-
-  $('div[name=sca-animation]').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
-    $(this).removeClass();
-    $(this).removeAttr('style');
-  });
-
 
   // quicksand
   $('#filterOptions li.active a').attr('class');
@@ -168,19 +92,59 @@ jQuery(document).ready(function($){
   });
   //end quicksand
 
-  $(".sca-slider").nerveSlider({
-    sliderFullscreen: false,
-    slideTransitionDelay: 55000
+  var scaSlider = $('.sca-slider').bxSlider({
+    auto: false,
+    pager: false,
+    controls: true
   });
 
+  // video1 = videojs('v_prueba_1',defaultVideoOptions, function() {
+  //   this.on('ended', v1());
+  // });
+
+  video1 = videojs('v_prueba_1',defaultVideoOptions, function() {});
+  // video1.play();
+
+  video2 = videojs('v_prueba_2', defaultVideoOptions, function() {});
+
+  video3 = videojs('v_prueba_3',defaultVideoOptions, function() {});
+
+  video4 = videojs('v_prueba_4', defaultVideoOptions, function() {});
+
+  video5 = videojs('v_prueba_5',defaultVideoOptions, function() {});
+
+  video6 = videojs('v_prueba_6', defaultVideoOptions, function() {});
+
+  video1.on('ended', function() {
+    setAnimation($('#video2'),'animated shake');
+    video2.play();
+  });
+
+  video2.on('ended', function() {
+    scaSlider.goToSlide(1);
+    video3.play();
+  });
+
+  video3.on('ended', function() {
+    setAnimation($('#video4'),'animated shake');
+    video4.play();
+  });
+
+  video4.on('ended', function() {
+    // scaSlider.goToNextSlide();
+    scaSlider.goToSlide(2);
+    video5.play();
+  });
+
+  video5.on('ended', function() {
+    video6.play();
+  });
+
+  video6.on('ended', function() {
+    scaSlider.goToSlide(0);
+    video1.play();
+  });
+
+  video1.play();
+
 });
-
-function resizeVideoJS(){
-  for(var video in videosArray){
-    var width = document.getElementById(videosArray[video].element.id()).parentElement.offsetWidth-50;
-    videosArray[video].element.width(width).height( width * videosArray[video].ratio );
-  }
-}
-
-resizeVideoJS();
-window.onresize = resizeVideoJS;
