@@ -109,7 +109,7 @@ p {
 ================================================== */
 #academic-levels {
   padding: 0;
-  background: url('../img/grid_bg.png') repeat top left #fff;
+  /*background: url('../img/grid_bg.png') repeat top left #fff;*/
 }
 
 #academic-levels h2 {
@@ -139,29 +139,92 @@ p {
   color: #4C4C4C;
 }
 
-#academic-levels .academic-level.initial {
+/* ==================================================
+    OPC 1
+================================================== */
+#academic-levels.opc-1 .academic-level.initial {
   background-color: #F9F7D0;
 }
 
-#academic-levels .academic-level.initial h3{
-  color: #A7A362;
-}
-
-#academic-levels .academic-level.primary {
+#academic-levels.opc-1 .academic-level.primary {
   background-color: #B7CCAB;
 }
 
-#academic-levels .academic-level.primary h3{
-  color: #65735C;
-}
-
-#academic-levels .academic-level.secundary {
+#academic-levels.opc-1 .academic-level.secundary {
   background-color: #81D9F3;
 }
 
-#academic-levels .academic-level.secundary h3{
-  color: #416D79;
+/* ==================================================
+    OPC 2
+================================================== */
+#academic-levels.opc-2 p {
+  color: #FFFFFF;
 }
+
+#academic-levels .academic-level.opc-2{
+  margin: 20px;
+}
+
+#academic-levels.opc-2 .academic-level.initial {
+  min-height: 400px;
+  background-image: url('../img/academic-levels/inicial.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#academic-levels.opc-2 .academic-level.initial .content {
+  margin-top: 60px;
+  background: rgba(72, 60, 60, 0.6);
+}
+
+#academic-levels.opc-2 .academic-level.initial h3{
+  color: #1EFF65;
+}
+
+#academic-levels.opc-2 .academic-level.primary {
+  min-height: 800px;
+  background-image: url('../img/academic-levels/primaria.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#academic-levels.opc-2 .academic-level.primary .content {
+  margin-top: 500px;
+  background: rgba(72, 60, 60, 0.6);
+}
+
+#academic-levels.opc-2 .academic-level.primary h3{
+  color: #FFFA23;
+}
+
+#academic-levels.opc-2 .academic-level.secundary {
+  min-height: 800px;
+  background-image: url('../img/academic-levels/secundaria.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#academic-levels.opc-2 .academic-level.secundary .content {
+  margin-top: 500px;
+  background: rgba(72, 60, 60, 0.6);
+}
+
+#academic-levels.opc-2 .academic-level.secundary h3{
+  color: #20CEFD;
+}
+
 
 /* ==================================================
    School of Tomorrow
@@ -182,6 +245,12 @@ p {
   -moz-transition:all 0.5s linear;
   -o-transition:all 0.5s linear;
   transition:all 0.5s linear;
+  color: #474747;
+}
+
+#sca .bx-wrapper {
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 #sca h2 {
@@ -265,7 +334,19 @@ p {
   margin: 0 auto;
 }
 
-#attendance h3 {
+#attendance {
+  background-color: #FFEE58;
+}
+
+#evaluation {
+  background-color: #9FA8DA;
+}
+
+#task {
+  background-color: #66BB6A;
+}
+
+/*#attendance h3 {
   color: #FFEE58;
 }
 
@@ -275,7 +356,7 @@ p {
 
 #task h3 {
   color: #66BB6A;
-}
+}*/
 
 /* ==================================================
    Gallery

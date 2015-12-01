@@ -3,11 +3,6 @@
 var video1 = null, video2 = null, video3 = null,
     video4 = null, video5 = null, video6 = null;
 
-      function v1(){
-    setAnimation($('#video2'),'animated shake');
-    video2.play();
-  }
-
 var defaultVideoOptions = {
   controls:false,
   autoplay:false,
@@ -98,12 +93,8 @@ jQuery(document).ready(function($){
     controls: true
   });
 
-  // video1 = videojs('v_prueba_1',defaultVideoOptions, function() {
-  //   this.on('ended', v1());
-  // });
 
   video1 = videojs('v_prueba_1',defaultVideoOptions, function() {});
-  // video1.play();
 
   video2 = videojs('v_prueba_2', defaultVideoOptions, function() {});
 

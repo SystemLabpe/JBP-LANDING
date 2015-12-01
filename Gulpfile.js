@@ -102,6 +102,8 @@ gulp.task('copy', function() {
   .pipe(gulp.dest('./dist/fonts'));
   gulp.src('./app/img/**')
   .pipe(gulp.dest('./dist/img'));
+  gulp.src('./app/video/**')
+  .pipe(gulp.dest('./dist/video'));
 });
 
 // Vigila cambios que se produzcan en el código
