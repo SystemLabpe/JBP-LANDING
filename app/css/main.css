@@ -40,6 +40,7 @@ h2 {
   margin-bottom: 30px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: #006089;
 }
 
 p {
@@ -105,6 +106,354 @@ p {
 }
 
 /* ==================================================
+    OPC 1
+================================================== */
+#home.home-opc-1 {
+  min-height: 0;
+  padding: 30px 0;
+  background-color: #004968;
+}
+
+#home.home-opc-1 .slogan {
+  margin-bottom: 30px;
+}
+
+/* ==================================================
+   jbp Nav
+================================================== */
+.jbp-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  z-index: 100;
+}
+
+@media only screen and (min-width: 768px) {
+  .jbp-header {
+    height: 70px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+#logo-header {
+  float: left;
+  margin: 13px 0 0 5%;
+}
+
+#logo-header img {
+  display: block;
+  height: 50px;
+}
+
+#logo-header{
+  margin: 10px 0 0 5%;
+}
+
+#logo-header.is-hidden {
+    /* assign a position fixed and move outside the viewport (on the left) */
+    opacity: 0;
+    position: fixed;
+    left: -20%;
+    margin-left: 0;
+    -webkit-transition: left 0.3s, opacity 0.3s;
+    -moz-transition: left 0.3s, opacity 0.3s;
+    transition: left 0.3s, opacity 0.3s;
+  }
+
+@media only screen and (min-width: 1170px) {
+  /*#logo-header.is-hidden {
+    /* assign a position fixed and move outside the viewport (on the left)
+    opacity: 0;
+    position: fixed;
+    left: -20%;
+    margin-left: 0;
+    -webkit-transition: left 0.3s, opacity 0.3s;
+    -moz-transition: left 0.3s, opacity 0.3s;
+    transition: left 0.3s, opacity 0.3s;
+  }*/
+  #logo-header.is-hidden.slide-in {
+    /* slide in when the secondary navigation gets fixed */
+    left: 5%;
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+.jbp-nav {
+  position: relative;
+  z-index: 99;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jbp-nav ul{
+  position: fixed;
+  width: 90%;
+  max-width: 400px;
+  right: 5%;
+  bottom: 20px;
+  border-radius: 0.25em;
+  background: rgba(55, 140, 88, 0.96);
+  visibility: hidden;
+  z-index: 99;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
+  -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
+  transition: transform 0.3s, visibility 0s 0.3s;
+}
+
+.jbp-nav ul.is-visible {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
+  -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
+  transition: transform 0.3s, visibility 0s 0s;
+}
+
+.jbp-nav li a {
+  display: block;
+  padding: 1.6em;
+  border-bottom: 1px solid #4c4c4c;
+  color: #fff;
+}
+.jbp-nav li:last-child a {
+  border-bottom: none;
+}
+
+@media only screen and (min-width: 1170px) {
+  .jbp-nav {
+    z-index: 99;
+    height: 90px;
+    /*background-color: rgba(247, 145, 0, 0.96);*/
+    background-color: rgba(55, 140, 88, 0.96);
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
+  }
+  .jbp-nav nav, .jbp-nav ul, .jbp-nav li, .jbp-nav a {
+    height: 100%;
+  }
+  .jbp-nav ul {
+    /* reset navigation values */
+    position: static;
+    width: auto;
+    max-width: 100%;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    text-align: center;
+    background-color: transparent;
+  }
+  .jbp-nav li {
+    display: inline-block;
+    margin-left: -4px;
+  }
+  .jbp-nav li a {
+    position: relative;
+    text-align: center;
+    display: block;
+    padding: 37px 35px 0 35px;
+    border-bottom: none;
+    -webkit-transition: padding 0.2s;
+    -moz-transition: padding 0.2s;
+    transition: padding 0.2s;
+  }
+  .jbp-nav li a b {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    /*color: rgba(240, 238, 225, 0.3);*/
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  .jbp-nav li a span {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    top: 18px;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-image: url(../img/cd-nav-icons.svg);
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+  .jbp-nav li a:hover b {
+    color: #4c4c4c;
+  }
+  .jbp-nav li:nth-child(1) a span {
+    background-position: 0 0;
+  }
+  .jbp-nav li:nth-child(2) a span {
+    background-position: -40px 0;
+  }
+  .jbp-nav li:nth-child(3) a span {
+    background-position: -80px 0;
+  }
+  .jbp-nav li:nth-child(4) a span {
+    background-position: -120px 0;
+  }
+  .jbp-nav li:nth-child(5) a span {
+    background-position: -160px 0;
+  }
+  .jbp-nav.is-fixed {
+    /* on Firefox CSS transition/animation fails when parent element changes position attribute*/
+    /* so we defined to diffent classes: .is-fixed to change the position value and .is-animated to change childrens' attributes (padding and opacity)*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 70px;
+    width: 100%;
+  }
+  .jbp-nav.animate-children {
+    /* on Firefox CSS transition/animation fails when parent element changes position attribute*/
+    /* so we defined to diffent classes: .is-fixed to change the position value and .is-animated to change childrens' attributes (padding and opacity)*/
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .jbp-nav.animate-children ul{
+    height: 50px;
+    margin-top: 10px;
+  }
+  .jbp-nav.animate-children li a {
+    padding: 17px 30px 0 30px;
+  }
+  .jbp-nav li a.active{
+    background-color: rgb(178, 205, 146);;
+    border-radius: 4px;
+  }
+  .jbp-nav.animate-children li a.active b {
+    color: #fff;
+  }
+  .jbp-nav.animate-children li a span {
+    opacity: 0;
+  }
+}
+
+.jbp-nav-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  width: 44px;
+  height: 44px;
+  /*background: rgba(247, 145, 0, 0.96);*/
+  background: rgba(55, 140, 88, 0.96);
+  border-radius: 0.25em;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 2;
+}
+.jbp-nav-trigger span {
+  /* the span element is used to create the menu icon */
+  position: absolute;
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #f0eee1;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.jbp-nav-trigger span::before, .jbp-nav-trigger span::after {
+  content: '';
+  position: absolute;
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.jbp-nav-trigger span::before {
+  right: -10px;
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+}
+.jbp-nav-trigger span::after {
+  left: -10px;
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+}
+.jbp-nav-trigger.menu-is-open {
+  background: transparent;
+  z-index: 100;
+}
+.jbp-nav-trigger.menu-is-open span {
+  background: rgba(240, 238, 225, 0);
+  width: 20px;
+  height: 2px;
+}
+.jbp-nav-trigger.menu-is-open span::before, .jbp-nav-trigger.menu-is-open span::after {
+  background: #f0eee1;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  top: 0;
+  left: 0;
+}
+.jbp-nav-trigger.menu-is-open span::before {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.jbp-nav-trigger.menu-is-open span::after {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+@media only screen and (min-width: 1170px) {
+  .jbp-nav-trigger {
+    display: none;
+  }
+}
+
+/* ==================================================
     Academic Levels
 ================================================== */
 #academic-levels {
@@ -113,7 +462,11 @@ p {
 }
 
 #academic-levels h2 {
-  color: #4CAF50;
+  /*color: #4CAF50;*/
+}
+
+#academic-levels p {
+  font-size: 18px;
 }
 
 #academic-levels .col-initial {
@@ -125,8 +478,9 @@ p {
 }
 
 #academic-levels h3 {
-  font-size: 40px;
+  font-size: 70px;
   text-align: center;
+  font-family: 'Niconne', cursive;
 }
 
 #academic-levels img {
@@ -167,7 +521,7 @@ p {
 
 #academic-levels.opc-2 .academic-level.initial {
   min-height: 400px;
-  background-image: url('../img/academic-levels/inicial.jpg');
+  background-image: url('../img/academic-levels/inicial_3.png');
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -187,7 +541,7 @@ p {
 
 #academic-levels.opc-2 .academic-level.primary {
   min-height: 800px;
-  background-image: url('../img/academic-levels/primaria.jpg');
+  background-image: url('../img/academic-levels/primaria_3.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -207,7 +561,7 @@ p {
 
 #academic-levels.opc-2 .academic-level.secundary {
   min-height: 800px;
-  background-image: url('../img/academic-levels/secundaria.jpg');
+  background-image: url('../img/academic-levels/secundaria_3.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -234,13 +588,13 @@ p {
 }
 
 #school-of-tomorrow h2 {
-  color: #3F51B5;
+  /*color: #3F51B5;*/
 }
 /* ==================================================
    SCA
 ================================================== */
 #sca {
-  background:#FFFFFF;
+  background: #FFEE58;
   -webkit-transition:all 0.5s linear;
   -moz-transition:all 0.5s linear;
   -o-transition:all 0.5s linear;
@@ -248,17 +602,26 @@ p {
   color: #474747;
 }
 
+#sca h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#sca .sca-logo {
+  margin: 0 auto;
+}
+
 #sca .bx-wrapper {
   box-shadow: none;
   -webkit-box-shadow: none;
-}
-
-#sca h2 {
-  color: #F44336;
+  border: none;
+  background-color: #FFEE58;
 }
 
 #sca h3 {
   text-align: center;
+  font-weight: bold;
+  color: #000000;
 }
 
 #sca .module {
@@ -335,15 +698,18 @@ p {
 }
 
 #attendance {
+  /*background-color: #FFEE58;*/
   background-color: #FFEE58;
 }
 
 #evaluation {
-  background-color: #9FA8DA;
+  /*background-color: #9FA8DA;*/
+  background-color: #FFEE58;
 }
 
 #task {
-  background-color: #66BB6A;
+  /*background-color: #66BB6A;*/
+  background-color: #FFEE58;
 }
 
 /*#attendance h3 {
@@ -366,7 +732,7 @@ p {
 }
 
 #gallery h2 {
-  color: #2196F3;
+  /*color: #2196F3;*/
 }
 
 #gallery ul.filterOptions {
@@ -541,15 +907,34 @@ p {
    About us
 ================================================== */
 #about-us {
-
+  background-color: #0D4A44;
 }
 
-#about-us h2{
-  color: #FF9800;
+#about-us  h3 {
+  color: #FFC107;
+  font-family: 'Niconne', cursive;
+  font-size: 52px;
+  text-align: center;
 }
 
-#about-us h3 {
-  color: #FFC107
+#about-us .mision.content,
+#about-us .vision.content {
+  background-color: #FFFFFF;
+  margin: 20px;
+  padding: 15px;
+  min-height: 270px;
+  box-shadow: 0 0 20px #CBDEE6;
+  border-radius: 6px;
+}
+
+#about-us .mision.content h3,
+#about-us .vision.content h3 {
+  margin-top: 0;
+}
+
+#about-us .content p {
+  text-align: justify;
+  color: #004968;
 }
 
 /* ==================================================
