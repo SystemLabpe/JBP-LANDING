@@ -83,12 +83,12 @@ p {
   padding-top: 100px;
 }
 
-#home .background {
+/*#home .background {
   width: 100%;
   position: absolute;
   margin-top: -100px;
   z-index: -1;
-}
+}*/
 
 #home .logo {
   margin: 0 auto;
@@ -521,7 +521,7 @@ p {
 
 #academic-levels.opc-2 .academic-level.initial {
   min-height: 400px;
-  background-image: url('../img/academic-levels/inicial_3.png');
+  background-image: url('../img/academic-levels/inicial_4.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -541,7 +541,7 @@ p {
 
 #academic-levels.opc-2 .academic-level.primary {
   min-height: 800px;
-  background-image: url('../img/academic-levels/primaria_3.jpg');
+  background-image: url('../img/academic-levels/primaria_4.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -561,7 +561,7 @@ p {
 
 #academic-levels.opc-2 .academic-level.secundary {
   min-height: 800px;
-  background-image: url('../img/academic-levels/secundaria_3.jpg');
+  background-image: url('../img/academic-levels/secundaria_4.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
