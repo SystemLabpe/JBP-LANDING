@@ -1,15 +1,5 @@
 "use strict";
 
-var video1 = null, video2 = null, video3 = null,
-    video4 = null, video5 = null, video6 = null;
-
-var defaultVideoOptions = {
-  controls:false,
-  autoplay:false,
-  preload:'auto',
-  muted:true
-};
-
 function initMap() {
   var location_1 = new google.maps.LatLng(-12.078021, -76.996479);
   var center = new google.maps.LatLng(-12.078021, -76.996479);
@@ -35,13 +25,6 @@ function initMap() {
 
   marker_1.addListener('click', function() {
     infowindow_1.open(map, marker_1);
-  });
-}
-
-function setAnimation(element,animation) {
-  element.removeClass().addClass(animation + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
-    element.removeClass();
-    element.removeAttr('style');
   });
 }
 
@@ -87,13 +70,27 @@ jQuery(document).ready(function($){
   });
   //end quicksand
 
+$(".fancybox").fancybox({
+    padding    : 0,
+    margin     : 5,
+    autoCenter : false,
+    afterLoad  : function () {
+      $.extend(this, {
+          aspectRatio : false,
+          type    : 'html',
+          width   : '100%',
+          height  : '100%',
+          content : '<div class="fancybox-image" style="background-image:url(' + this.href + '); background-size: cover; background-position:50% 50%;background-repeat:no-repeat;height:100%;width:100%;" /></div>'
+      });
+    }
+  });
+
   //Nav
   var secondaryNav = $('.jbp-nav'),
   secondaryNavTopPosition = secondaryNav.offset().top,
   contentSections = $('.jbp-section');
 
   $(window).on('scroll', function(){
-
     if($(window).scrollTop() > secondaryNavTopPosition ) {
       secondaryNav.addClass('is-fixed');
       setTimeout(function() {
@@ -163,55 +160,26 @@ jQuery(document).ready(function($){
   $('.cd-primary-nav').on('click', function(event){
     if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
   });
-});
 
-jQuery(window).load(function(){
-  var scaSlider = $('.sca-slider').bxSlider({
-    auto: false,
-    pager: false,
-    controls: true
+  $("#contact-submit").on('click',function() {
+    var $contact_form = $('#jbp-contact');
+    var fields = $contact_form.serialize();
+
+    $.ajax({
+      type: "POST",
+      url: "php/contact.php",
+      data: fields,
+      dataType: 'json',
+      success: function(response) {
+
+        if(response.status){
+          $('#jbp-contact input').val('');
+          $('#tta-contact textarea').val('');
+        }
+
+        $('#contact-response').empty().html(response.html);
+      }
+    });
+    return false;
   });
-
-  video1 = videojs('v_prueba_1',defaultVideoOptions, function() {});
-
-  video2 = videojs('v_prueba_2', defaultVideoOptions, function() {});
-
-  video3 = videojs('v_prueba_3',defaultVideoOptions, function() {});
-
-  video4 = videojs('v_prueba_4', defaultVideoOptions, function() {});
-
-  video5 = videojs(document.getElementsByClassName('bx-video-5')[1],defaultVideoOptions, function() {});
-
-  video6 = videojs(document.getElementsByClassName('bx-video-6')[1], defaultVideoOptions, function() {});
-
-  video1.on('ended', function() {
-    setAnimation($('#video2'),'animated shake');
-    video2.play();
-  });
-
-  video2.on('ended', function() {
-    scaSlider.goToSlide(1);
-    video3.play();
-  });
-
-  video3.on('ended', function() {
-    setAnimation($('#video4'),'animated shake');
-    video4.play();
-  });
-
-  video4.on('ended', function() {
-    scaSlider.goToSlide(2);
-    video5.play();
-  });
-
-  video5.on('ended', function() {
-    video6.play();
-  });
-
-  video6.on('ended', function() {
-    scaSlider.goToSlide(0);
-    video1.play();
-  });
-
-  video1.play();
 });

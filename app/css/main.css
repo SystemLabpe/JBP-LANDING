@@ -47,6 +47,21 @@ p {
   font-size: 16px;
 }
 
+.btn-jbp {
+  background-color: #0D4A44;
+  color: #FFFFFF;
+}
+
+.btn-jbp:hover {
+  background-color: #2A5450;
+  color: #FFFFFF;
+}
+
+#fancybox-close {
+  top: 0;
+  right: -40px;
+}
+
 /* ==================================================
    Videos
 ================================================== */
@@ -111,7 +126,14 @@ p {
 #home.home-opc-1 {
   min-height: 0;
   padding: 30px 0;
-  background-color: #004968;
+  /*background-color: #004968;*/
+  background-image: url('../img/home-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #home.home-opc-1 .slogan {
@@ -521,9 +543,9 @@ p {
 
 #academic-levels.opc-2 .academic-level.initial {
   min-height: 400px;
-  background-image: url('../img/academic-levels/inicial_4.jpg');
+  background-image: url('../img/academic-levels/inicial.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -541,7 +563,7 @@ p {
 
 #academic-levels.opc-2 .academic-level.primary {
   min-height: 800px;
-  background-image: url('../img/academic-levels/primaria_4.jpg');
+  background-image: url('../img/academic-levels/primaria.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -561,7 +583,7 @@ p {
 
 #academic-levels.opc-2 .academic-level.secundary {
   min-height: 800px;
-  background-image: url('../img/academic-levels/secundaria_4.jpg');
+  background-image: url('../img/academic-levels/secundaria.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: cover;
@@ -590,149 +612,12 @@ p {
 #school-of-tomorrow h2 {
   /*color: #3F51B5;*/
 }
-/* ==================================================
-   SCA
-================================================== */
-#sca {
-  background: #FFEE58;
-  -webkit-transition:all 0.5s linear;
-  -moz-transition:all 0.5s linear;
-  -o-transition:all 0.5s linear;
-  transition:all 0.5s linear;
-  color: #474747;
-}
-
-#sca h2 {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-#sca .sca-logo {
-  margin: 0 auto;
-}
-
-#sca .bx-wrapper {
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  border: none;
-  background-color: #FFEE58;
-}
-
-#sca h3 {
-  text-align: center;
-  font-weight: bold;
-  color: #000000;
-}
-
-#sca .module {
-  margin: 0 0 6em;
-}
-
-#sca .module h3 {
-  padding: 0.5em 0 1.5em;
-}
-
-#sca .module p {
-  font-size: 18px;
-}
-
-#sca .module .row {
-  margin-bottom: 20px;
-}
-
-#sca #video1,
-#sca #video2,
-#sca #video3,
-#sca #video4,
-#sca #video5,
-#sca #video6 {
-  max-width: 634px;
-  display: inline-block;
-  height: auto;
-  margin: 0 15px;
-  position: relative;
-  width: auto;
-}
-
-#sca #video1 .video-js,
-#sca #video3 .video-js,
-#sca #video5 .video-js {
-  position: absolute;
-  top: 4.9%;
-  left: 10.7%;
-  width: 79% !important;
-  height: auto !important;
-}
-
-#sca #video1 .video-js video,
-#sca #video2 .video-js video,
-#sca #video3 .video-js video,
-#sca #video4 .video-js video,
-#sca #video5 .video-js video,
-#sca #video6 .video-js video {
-  height: auto !important;
-}
-
-#sca #video1 img,
-#sca #video2 img,
-#sca #video3 img,
-#sca #video4 img,
-#sca #video5 img,
-#sca #video6 img {
-  width: 100%;
-  height: 100%;
-}
-
-#sca #video2 .video-js,
-#sca #video4 .video-js,
-#sca #video6 .video-js {
-  position: absolute;
-  top: 8.5%;
-  left: 4%;
-  width: 92% !important;
-  height: auto !important;
-}
-
-#sca .module .video-js {
-  margin: 0 auto;
-}
-
-#attendance {
-  /*background-color: #FFEE58;*/
-  background-color: #FFEE58;
-}
-
-#evaluation {
-  /*background-color: #9FA8DA;*/
-  background-color: #FFEE58;
-}
-
-#task {
-  /*background-color: #66BB6A;*/
-  background-color: #FFEE58;
-}
-
-/*#attendance h3 {
-  color: #FFEE58;
-}
-
-#evaluation h3 {
-  color: #9FA8DA;
-}
-
-#task h3 {
-  color: #66BB6A;
-}*/
 
 /* ==================================================
    Gallery
 ================================================== */
 #gallery {
   color: #FFFFFF;
-}
-
-#gallery h2 {
-  /*color: #2196F3;*/
 }
 
 #gallery ul.filterOptions {
@@ -770,6 +655,7 @@ p {
 }
 
 #gallery .item-content {
+  border-radius: 6px;
   margin: 3px;
   float: left;
   overflow: hidden;
@@ -790,6 +676,7 @@ p {
    position: relative;
    font-size: 16px;
    padding: 10px;
+   color: #FFFFFF;
    background: rgba(0, 0, 0, 0.4);
 }
 
@@ -826,7 +713,7 @@ p {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
    filter: alpha(opacity=0);
    opacity: 0;
-   background-color: rgba(77,77,77, 0.9);
+   background-color: rgba(13,74,68,0.8);
    -webkit-transition: all 0.4s ease-in-out;
    -moz-transition: all 0.4s ease-in-out;
    -o-transition: all 0.4s ease-in-out;
@@ -937,13 +824,69 @@ p {
   color: #004968;
 }
 
+.student-profile ul {
+  margin-top: 20px;
+  list-style: disc;
+}
+
+.student-profile ul li {
+  font-size: 18px;
+  color: #FFFFFF
+}
+
+.values .row {
+  text-align: center;
+}
+
+.values .value {
+  margin-top: 20px;
+  float: none !important;
+  display: inline-block;
+}
+
+.values .value img{
+  border-radius: 50%;
+}
+
+.values .value h4 {
+  text-align: center;
+  color: #FFFFFF;
+}
+
 /* ==================================================
    Contacts
 ================================================== */
 #contact {
-
+  padding: 100px 0;
 }
 
 #contact h2 {
 
+}
+
+#contact .form-column {
+  padding-top: 20px;
+}
+
+#contact-response {
+  margin: 0;
+}
+
+
+/* ==================================================
+   Footer
+================================================== */
+#footer {
+  color: #FFFFFF;
+  font-size: 14px;
+  background-color: #0D4A44;
+  padding: 14px 30px;
+}
+
+#footer .copyright a {
+  color: #FFFA23;
+}
+
+#footer .social-icons a {
+  color: #FFFFFF;
 }

@@ -11,9 +11,7 @@
   <!-- bower:css -->
   <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
   <link rel='stylesheet' href='lib/font-awesome/css/font-awesome.css' />
-  <link rel='stylesheet' href='lib/video.js/dist/video-js.css' />
-  <link rel='stylesheet' href='lib/animate.css/animate.css' />
-  <link rel='stylesheet' href='lib/bxslider-4/dist/jquery.bxslider.css' />
+  <link rel='stylesheet' href='lib/jquery.fancybox/fancybox/jquery.fancybox-1.3.4.css' />
   <!-- endbower -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/css/elastic_grid.css">
@@ -22,6 +20,7 @@
   <link rel="stylesheet" href="/css/responsive.css">
   <!-- endinject -->
   <!-- endbuild -->
+  <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
   <header class="lym-header">
@@ -31,8 +30,7 @@
       </a>
     </div>
   </header>
-  <section id="home" class="jbp-section home-opc-1"><!--
-    <img src="img/home-bg-2.jpg" class="background"> -->
+  <section id="home" class="jbp-section home-opc-1">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -54,11 +52,6 @@
     <a href="#0" class="jbp-nav-trigger">Menu<span></span></a>
     <nav>
     <ul>
-      <!-- <li>
-        <a href="#home">
-          <b>Inicio</b>
-        </a>
-      </li> -->
       <li>
         <a href="#academic-levels">
           <b>Niveles</b>
@@ -69,11 +62,6 @@
           <b>School of Tomorrow</b>
         </a>
       </li>
-      <!-- <li>
-        <a href="#sca">
-          <b>SCA</b>
-        </a>
-      </li> -->
       <li>
         <a href="#gallery">
           <b>Galeria</b>
@@ -89,14 +77,13 @@
           <b>Contacto</b>
         </a>
       </li>
-      <!-- other items here -->
     </ul>
   </nav>
   </div>
   <section id="academic-levels" class="jbp-section opc-2">
     <div class="container-fluid">
         <article class="row academic-level initial">
-          <div class="col-md-4 content">
+          <div class="col-md-4 col-xs-8 col-xs-offset-2 content">
             <h3>Inicial</h3>
             <p>Una educación integral que desarrolla la inteligencia y creatividad de su menor hijo, en un ambiente seguro y recreativo.</p>
           </div>
@@ -105,7 +92,7 @@
       <div class="row">
         <article class="col-md-6 academic-level primary">
           <div class="row">
-            <div class="col-md-8 col-md-offset-2 content">
+            <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 content">
               <h3>Primaria</h3>
               <p>Una educación que promueve el logro de metas personales en los educandos a través de capacidades y valores.</p>
             </div>
@@ -113,7 +100,7 @@
         </article>
         <article class="col-md-6 academic-level secundary">
           <div class="row">
-            <div class="col-md-8 col-md-offset-2 content">
+            <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 content">
               <h3>Secundaria</h3>
               <p>Desarrollamos una educación que promueva al estudiante la capacidad de ingresar a la universidad y pueda desenvolverse con éxito en la sociedad al terminar su etapa escolar.</p>
             </div>
@@ -122,78 +109,6 @@
       </div>
     </div>
   </section>
-  <br><br>
-<!--   <section id="academic-levels" class="jbp-section opc-2">
-    <div class="container">
-        <article class="row academic-level initial opc-2">
-          <div class="col-md-4 content">
-            <h3>Inicial</h3>
-            <p>Una educación integral que desarrolla la inteligencia y creatividad de su menor hijo, en un ambiente seguro y recreativo.</p>
-          </div>
-        </article>
-      <div class="row">
-        <article class="col-md-6">
-          <div class="academic-level primary opc-2">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2 content">
-                <h3>Primaria</h3>
-                <p>Una educación que promueve el logro de metas personales en los educandos a través de capacidades y valores.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-md-6">
-          <div class="academic-level secundary opc-2">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2 content">
-                <h3>Secundaria</h3>
-                <p>Desarrollamos una educación que promueva al estudiante la capacidad de ingresar a la universidad y pueda desenvolverse con éxito en la sociedad al terminar su etapa escolar.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-  <br><br> -->
-  <!-- <section id="academic-levels" class="jbp-section opc-1">
-    <div class="container-fluid">
-      <article class="row academic-level initial">
-        <div class="col-md-4">
-          <img src="img/academic-levels/old/inicial.jpg" class="img-responsive">
-        </div>
-        <div class="col-md-4">
-          <h3>Inicial</h3>
-          <p>Una educación integral que desarrolla la inteligencia y creatividad de su menor hijo, en un ambiente seguro y recreativo.</p>
-        </div>
-        <div class="col-md-4">
-          <img src="img/academic-levels/old/inicial_2.jpg" class="img-responsive">
-        </div>
-      </article>
-      <div class="row">
-        <article class="col-md-6 academic-level primary">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <img src="img/academic-levels/old/primaria.jpg" class="img-responsive">
-              <h3>Primaria</h3>
-              <p>Una educación que promueve el logro de metas personales en los educandos a través de capacidades y valores.</p>
-              <img src="img/academic-levels/old/primaria_2.jpg" class="img-responsive">
-            </div>
-          </div>
-        </article>
-        <article class="col-md-6 academic-level secundary">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <img src="img/academic-levels/old/secundaria.jpg" class="img-responsive">
-              <h3>Secundaria</h3>
-              <p>Desarrollamos una educación que promueva al estudiante la capacidad de ingresar a la universidad y pueda desenvolverse con éxito en la sociedad al terminar su etapa escolar.</p>
-              <img src="img/academic-levels/old/secundaria_2.jpg" class="img-responsive">
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section> -->
   <section id="school-of-tomorrow"class="jbp-section">
     <div class="container">
       <h2>School of Tomorrow</h2>
@@ -209,164 +124,159 @@
       </div>
     </div>
   </section>
-<!--   <section id="sca" class="jbp-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2 col-md-offset-5">
-          <img src="img/sca-logo.png" class="img-responsive sca-logo">
-        </div>
-      </div>
-      <h2>Sistema de Comunicación Académica</h2>
-      <div class="sca-slider">
-        <div class="slide bg-1">
-          <article id="attendance" class="module attendance">
-            <h3>ASISTENCIA</h3>
-            <div class="row">
-              <div class="col-md-7">
-                <p class="text-center">Ahorra tiempo registrando las asistencias de tus alumnos.</p>
-                <div id="video1">
-                  <video id="v_prueba_1" class="video-js">
-                   <source src="video/attendance/attendance-web.mp4" type='video/mp4' />
-                   <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
-                  </video>
-                  <img src="img/monitor.png">
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    <p class="text-center">Ahora podrás saber el estado de las asistencias en tiempo real.</p>
-                    <div id="video2">
-                      <video id="v_prueba_2" class="video-js">
-                       <source src="video/attendance/attendance-movil.mp4" type='video/mp4' />
-                       <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
-                      </video>
-                      <img src="img/mobile.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="slide bg-2">
-          <article id="evaluation" class="module evaluation">
-            <h3>EVALUACIONES</h3>
-            <div class="row">
-              <div class="col-md-7">
-                <p class="text-center">Registra las notas de tus alumnos de una manera rápida y sencilla.</p>
-                <div id="video3">
-                  <video id="v_prueba_3" class="video-js">
-                   <source src="video/evaluations/evaluation-web.mp4" type='video/mp4' />
-                   <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
-                  </video>
-                  <img src="img/monitor-small.png">
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    <p class="text-center">Monitorea su desempeño en cada una de las asignaturas.</p>
-                    <div id="video4">
-                      <video id="v_prueba_4" class="video-js">
-                       <source src="video/evaluations/evaluation-movil.mp4" type='video/mp4' />
-                       <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
-                      </video>
-                      <img src="img/mobile.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="slide bg-3">
-          <article id="task" class="module task">
-            <h3>TAREAS</h3>
-            <div class="row">
-              <div class="col-md-7">
-                <p class="text-center">Planifica las tareas y matenlas organizadas para su posterior calificación.</p>
-                <div id="video5" >
-                  <video id="v_prueba_5" class="video-js bx-video-5">
-                   <source src="video/tasks/task-web.mp4" type='video/mp4' />
-                   <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
-                  </video>
-                  <img src="img/monitor-small.png">
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    <p class="text-center">Enterate de las tareas y ayudalo a planificar el desarrollo de las mismas.</p>
-                    <div id="video6">
-                      <video id="v_prueba_6" class="video-js bx-video-6">
-                       <source src="video/tasks/task-movil.mp4" type='video/mp4' />
-                       <p class="vjs-no-js">No se encuentra activado el Javascript, revise su configuración del navegador.</p>
-                      </video>
-                      <img src="img/mobile.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <section id="gallery" class="jbp-section">
     <div class="container">
       <div class="row">
         <ul id="filterOptions" class="filterOptions list-inline">
           <li class="active"><a href="#" class="todos">Todos</a></li>
-          <li class=""><a href="#" class="viajes">Viajes</a></li>
+          <li class=""><a href="#" class="olimpiadas">Olimpiadas</a></li>
           <li class=""><a href="#" class="paseos">Paseos</a></li>
-          <li class=""><a href="#" class="retiros">Retiros</a></li>
+          <li class=""><a href="#" class="viajes">Viajes</a></li>
+          <li class=""><a href="#" class="otros">Otros</a></li>
         </ul>
       </div>
-      <div id="item-list" class="row item-list">
-        <article class="col-md-3 col-sm-6 item" data-id="1" data-type="viajes">
+      <div id="item-list" class="row item-list text-center">
+        <article class="col-md-3 col-sm-6 item" data-id="1" data-type="olimpiadas">
           <div class="item-content">
-            <img src="img/logo.png" class="img-responsive"/>
-            <div class="item-mask">
-              <h3>School of tomorrow</h3>
-              <ul class="list-group">
-                <li><strong>Año:</strong> 2014</li>
-                <li><strong>Grado:</strong> 1° secundaria</li>
-                <li><strong>Lugar:</strong> Pachacamac</li>
-              </ul>
-            </div>
+            <a class="fancybox" rel="group" href="img/gallery/olimp_2015_1.jpg">
+              <img src="img/gallery/olimp_2015_1.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Olimpiadas 2015</h3>
+              </div>
+            </a>
           </div>
         </article>
-        <article class="col-md-3 col-sm-6 item" data-id="2" data-type="paseos">
+        <article class="col-md-3 col-sm-6 item" data-id="2" data-type="olimpiadas">
           <div class="item-content">
-            <img src="img/logo.png" class="img-responsive"/>
-            <div class="item-mask">
-              <h3>Paseo de integración</h3>
-              <ul class="list-group">
-                <li><strong>Año:</strong> 2014</li>
-                <li><strong>Grado:</strong> 1° secundaria</li>
-                <li><strong>Lugar:</strong> Parque de las leyendas</li>
-              </ul>
-            </div>
+            <a class="fancybox" rel="group" href="img/gallery/olimp_2015_2.jpg">
+              <img src="img/gallery/olimp_2015_2.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Olimpiadas 2015</h3>
+              </div>
+            </a>
           </div>
         </article>
-        <article class="col-md-3 col-sm-6 item" data-id="3" data-type="retiros">
+        <article class="col-md-3 col-sm-6 item" data-id="3" data-type="olimpiadas">
           <div class="item-content">
-            <img src="img/logo.png" class="img-responsive"/>
-            <div class="item-mask">
-              <h3>Retiro de primera comunión</h3>
-              <ul class="list-group">
-                <li><strong>Año:</strong> 2014</li>
-                <li><strong>Grado:</strong> 1° secundaria</li>
-                <li><strong>Lugar:</strong> Lurin</li>
-              </ul>
-            </div>
+            <a class="fancybox" rel="group" href="img/gallery/olimp_2015_3.jpg">
+              <img src="img/gallery/olimp_2015_3.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Olimpiadas 2015</h3>
+              </div>
+            </a>
           </div>
         </article>
-
+        <article class="col-md-3 col-sm-6 item" data-id="4" data-type="olimpiadas">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/olimp_2014.jpg">
+              <img src="img/gallery/olimp_2014.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Olimpiadas 2014</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="5" data-type="paseos">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/paseo_2014.jpg">
+              <img src="img/gallery/paseo_2014.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Paseo 2014</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="6" data-type="paseos">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/paseo_2015.jpg">
+              <img src="img/gallery/paseo_2015.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Paseo 2015</h3>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="7" data-type="viajes">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/viaje_cusco.jpg">
+              <img src="img/gallery/viaje_cusco.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Viaje a Cusco</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="8" data-type="viajes">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/viaje_mancora.jpg">
+              <img src="img/gallery/viaje_mancora.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Viaje a Máncora</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="9" data-type="otros">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/otro_graduacion_secundaria.jpg">
+              <img src="img/gallery/otro_graduacion_secundaria.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Graduación Secundaria</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="10" data-type="otros">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/otro_inicial_1.jpg">
+              <img src="img/gallery/otro_inicial_1.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Arte en Inicial</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="11" data-type="otros">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/otro_inicial_2.jpg">
+              <img src="img/gallery/otro_inicial_2.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Arte en Inicial</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="12" data-type="otros">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/otro_primaria_arte.jpg">
+              <img src="img/gallery/otro_primaria_arte.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Arte en Primaria</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="13" data-type="otros">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/otro_inicial_danza_tipica.jpg">
+              <img src="img/gallery/otro_inicial_danza_tipica.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Danza en Inicial</h3>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="col-md-3 col-sm-6 item" data-id="14" data-type="otros">
+          <div class="item-content">
+            <a class="fancybox" rel="group" href="img/gallery/otro_marriot.jpg">
+              <img src="img/gallery/otro_marriot.jpg" class="img-responsive"/>
+              <div class="item-mask">
+                <h3>Recepción en el hotel Marriot</h3>
+              </div>
+            </a>
+          </div>
+        </article>
       </div>
-
     </div>
   </section>
   <section id="about-us"class="jbp-section">
@@ -385,32 +295,53 @@
           </div>
         </div>
       </div>
-      <div class="col-md-8 col-md-offset-2">
-        <h3 class="text-center">Valores</h3>
-        <div class="row">
-          <div class="col-md-3">
-            <h4>Respetuoso</h4>
-          </div>
-          <div class="col-md-3">
-            <h4>Creativo</h4>
-          </div>
-          <div class="col-md-3">
-            <h4>Honesto</h4>
-          </div>
-          <div class="col-md-3">
-            <h4>Obediente</h4>
-          </div>
-          <div class="col-md-3">
-            <h4>Compremetido</h4>
-          </div>
-          <div class="col-md-3">
-            <h4>Leal</h4>
-          </div>
-          <div class="col-md-3">
-            <h4>Responsable</h4>
+      <div class="row">
+        <div class="col-md-4 student-profile">
+          <h3 class="text-center">Perfil del <br>educando</h3>
+          <ul>
+            <li>Fiel a Dios.</li>
+            <li>Temeroso a sus mandatos.</li>
+            <li>Obediente a sus padres.</li>
+            <li>Responsable ante sus obligaciones.</li>
+            <li>Respetuoso y solidario con sus semejantes.</li>
+            <li>Anhelante de superación y desarrollo.</li>
+          </ul>
+        </div>
+        <div class="col-md-8 values">
+          <h3 class="text-center">Valores</h3>
+          <div class="row">
+            <div class="col-md-2 value">
+              <img src="img/values/respeto.jpg" class="img-responsive">
+              <h4>Respetuoso</h4>
+            </div>
+            <div class="col-md-2 value">
+              <img src="img/values/creatividad.jpg" class="img-responsive">
+              <h4>Creativo</h4>
+            </div>
+            <div class="col-md-2 value">
+              <img src="img/values/honestidad.jpg" class="img-responsive">
+              <h4>Honesto</h4>
+            </div>
+            <div class="col-md-2 value">
+              <img src="img/values/obediencia.jpg" class="img-responsive">
+              <h4>Obediente</h4>
+            </div>
+            <div class="col-md-2 value">
+              <img src="img/values/compromiso.jpg" class="img-responsive">
+              <h4>Comprometido</h4>
+            </div>
+            <div class="col-md-2 value">
+              <img src="img/values/lealtad.jpg" class="img-responsive">
+              <h4>Leal</h4>
+            </div>
+            <div class="col-md-2 value">
+              <img src="img/values/responsabilidad.jpg" class="img-responsive">
+              <h4>Responsable</h4>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
   <section id="contact" class="jbp-section">
@@ -419,27 +350,59 @@
         <div class="col-md-6">
           <div id="location" style="width:100%; height:350px;"></div>
         </div>
-        <div class="col-md-6">
-
+        <div class="col-md-6 form-column">
+          <p class="text-center">Para mayor información contáctese con nosotros</p>
+          <form id="jbp-contact" class="form-horizontal">
+            <div class="form-group">
+              <input id="contact_name" type="text" class="form-control" placeholder="Nombre" name="name">
+            </div>
+            <div class="form-group">
+              <input id="contact_email" type="mail" class="form-control" placeholder="Correo" name="email">
+            </div>
+            <div class="form-group">
+              <input id="phone" type="text" class="form-control" placeholder="Celular" name="phone">
+            </div>
+            <div class="form-group">
+              <textarea id="comment" name="comment" class="form-control" rows="4" placeholder="Consulta"></textarea>
+              <p id="contact-response"></p>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <button id="contact-submit" class="btn btn-jbp col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">ENVIAR</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </section>
+  <footer id="footer">
+    <div class="row">
+      <div class="col-md-6 text-left copyright">
+        <span>© 2016 Jesús el Buen Pastor - Todos los derechos reservados <br>
+        Diseño y Desarrollo <a href="http://www.systemlab.com.pe/" target="_blank"> SYSTEMLAB</a></span>
+      </div>
+      <div class="col-md-6 text-right social-icons">
+        <a href="https://www.facebook.com/jesuselbuenpastorsanluis"><i class="fa fa-facebook-square fa-2x"></i></a>
+      </div>
+    </div>
+  </footer>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
   <!-- build:js js/vendor.min.js -->
   <!-- bower:js -->
-  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/jquery/jquery.js"></script>
   <script src="lib/jquery-ui/jquery-ui.js"></script>
   <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="lib/video.js/dist/video.js"></script>
-  <script src="lib/wow/dist/wow.js"></script>
   <script src="lib/typed.js/dist/typed.min.js"></script>
-  <script src="lib/bxslider-4/dist/jquery.bxslider.js"></script>
-  <script src="lib/jquery.fitvids/jquery.fitvids.js"></script>
+  <script src="lib/jquery-migrate/jquery-migrate.js"></script>
+  <script src="lib/jquery.fancybox/fancybox/jquery.fancybox-1.3.4.js"></script>
+
   <!-- endbower -->
   <!-- inject:js -->
+  <script src="/js/jquery.easing.1.3.js"></script>
   <script src="/js/jquery.nerveSlider.js"></script>
+  <script src="/js/jquery.quicksand.js"></script>
   <script src="/js/main.js"></script>
   <!-- endinject -->
   <!-- endbuild -->
